@@ -1,0 +1,476 @@
+/* import Google Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;600;900&display=swap');
+/* Colors */
+:root {
+  --gunmetal: #17252aff;
+  --myrtle-green: #2b7a78ff;
+  --verdigris: #3aafa9ff;
+  --azure-web: #def2f1ff;
+  --baby-powder: #fcfffdff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--gunmetal);
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  position: relative;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2vw 4vw;
+    z-index: 1000;
+    /* height: 80px; */
+    /* line-height: 80px; */
+}
+
+.logo{
+  display: flex;
+  color: var(--baby-powder);
+  font-size: 3vw;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  /* text-transform: uppercase; */
+}
+
+b{
+  /* position: absolute; */
+  color: var(--verdigris);
+  /* font-size: 3vw; */
+  padding-top: 2%;
+}
+
+.navItems{
+  display: flex;
+  /* justify-content: space-around;
+  width: 50%; */
+  margin: 0 auto;
+}
+
+.navItems li{
+  list-style: none;
+  margin: 0 1.5vw;
+}
+
+.navItems li a{
+  display: block;
+  text-decoration: none;
+  color: var(--baby-powder);
+  font-size: 2vw;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  transition: all 0.3s ease;
+}
+
+.navItems li a:hover, .links a:hover{
+  color: var(--verdigris);
+}
+
+.links {
+  position: fixed;
+  top: 50%;
+  right: -15vw;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.links .fab {
+  width: 20vw;
+  padding: 1vw;
+  font-size: 2.5vw;
+  cursor: pointer;
+  background-color: var(--baby-powder);
+  transition: 0.5s ease;
+}
+.links .fab:hover{
+  background-color: var(--verdigris);
+  color: var(--azure-web);
+  transform: translateX(-10vw);
+}
+
+.links .fab span {
+  position: relative;
+  font-size: 1.8vw;
+  bottom: 0.3vw;
+  margin-left: 1.8vw;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  /* height: calc(100vh - 80px); */
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* overflow: hidden; */
+}
+.wrapper::before{
+  position: absolute;
+  content: '';
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  left: -12%;
+  top: 30%;
+  background: linear-gradient(45deg, var(--myrtle-green), var(--azure-web));
+  animation: object1 6s linear infinite;
+}
+/* .wrapper::after{
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  left: 35%;
+  top: 12%;
+  background: linear-gradient(45deg, var(--myrtle-green), var(--azure-web));
+  animation: object2 6s linear infinite;
+} */
+@keyframes object1 {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+  50% {
+    width: 400px;
+    height: 400px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes object2 {
+  50% {
+    left: 35%;
+    top: 10%;
+  }
+}
+
+
+.text_container {
+  /* background-color: red; */
+  /* padding-left: 3rem;
+  padding-top: 5rem; */
+  width: 50%;
+  z-index: 5;
+  position: relative;
+}
+
+.topline {
+  display: block;
+  position: relative;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: var(--baby-powder);
+}
+
+.topline::after {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 45px;
+  bottom: 10px;
+  background-color: var(--verdigris);
+}
+
+h1 {
+  display: block;
+  /* how can I use the minmax function to scale the font with the window size? */
+font-size: 7vh;
+  font-weight: 900;
+  color: var(--baby-powder);
+}
+
+.multiText {
+  color: var(--verdigris);
+}
+p{
+  display: block;
+  width: 90%;
+  font-size: 1.2em;
+  color: var(--azure-web);
+}
+.btns{
+  width: 100%;
+  position: relative;
+  left: 5vh;
+
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5vw;
+  font-weight: 400;
+  color: var(--gunmetal);
+  background-color: var(--baby-powder);
+  padding: 1% 3%;
+  margin: 5% 5%;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow: 0 15px 10px rgba(255, 255, 255, 0.119);
+}
+
+button:hover {
+  background-color: var(--verdigris);
+  color: var(--azure-web);
+}
+
+.image_container {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* background-color: antiquewhite; */
+}
+
+.imgbox {
+  position: relative;
+  min-width: 60vh;
+  margin-right: 10vw;
+  z-index: 1;
+}
+
+.imgbox img {
+  position: relative;
+  width: auto;
+ height: 100%;
+ width: 100%;
+  animation: animateUser 4s linear infinite;
+  object-fit: cover;
+}
+@keyframes animateUser {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animblob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 40vw;
+  width: 40vw;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(-560deg, var(--myrtle-green), var(--azure-web));
+  animation: animate_blob 8s linear infinite;
+}
+
+@keyframes animate_blob {
+  0%,100% {
+    border-radius: 45% 55% 70% 35% / 70% 30% 90% 40%;
+  }
+  25% {
+    border-radius: 55% 45% 30% 35% / 50% 30% 60% 10%;
+  }
+  50% {
+    border-radius: 65% 35% 35% 65% / 40% 60% 30% 70%;
+  }
+  75% {
+    border-radius: 35% 65% 60% 45% / 70% 30% 40% 60%;
+  }
+  
+}
+
+input {
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+}
+
+section label {
+  display: none;
+
+}
+
+@media screen and (max-width:1180px) and (min-width: 960px) {
+  h1 {
+    font-size: 6vw;
+  }
+}
+
+
+@media screen and (max-width: 960px) {
+
+  .logo{
+    font-size: 3vw;
+  }
+
+  section label {
+    display: block;
+    color: var(--baby-powder);
+    font-size: 3vw;
+    padding: 1vw 1.5vw;
+    background: var(--myrtle-green);
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+    .navItems{
+        position: fixed;
+        top: 0;
+        right: -40vw;
+        width: 40vw;
+        height: 100%;
+        background-color: var(--azure-web);
+        padding-top: 15vw;
+        padding-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        transition: 0.3s ease;
+    }
+
+    .navItems li a{
+        color: var(--gunmetal);
+        font-size: 4vw;
+        margin: 0.5vw 0;
+
+    }
+    #check:checked ~ section .navbar .navItems{
+        right: 0;
+    }
+
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .wrapper::before{
+      top: 10%;
+    }
+    .text_container{
+  
+      /* background-color: green; */
+        width: 100%;
+        padding: 15vw 10vw;
+        z-index: 100;
+    }
+    .text_container .topline {
+        font-size: 5vw;
+        line-height: 18vw;
+    }
+
+    .topline::after {
+        height: 0.4vh;
+        width: 5vw;
+        bottom: 7vw;
+    }
+
+    h1{
+       width: 130%;
+        font-size: 10vw;
+        line-height: 15vw;
+    }
+
+    .image_container {
+
+      width: 100%;
+      height: 80rem;
+      margin-top: -20vh;
+      overflow: hidden;
+    }
+
+    .imagebox {
+      height: 800px;
+      margin: 0;
+
+    }
+    .animblob{
+      height: 100vw;
+      width: 60vw;
+    }
+    .btns{
+      /* width: 50%; */
+      position: relative;
+      left: 1vh;
+      display: block;
+      flex-direction: column;
+    }
+    button {
+      outline: none;
+      border: none;
+      cursor: pointer;
+      font-size: 3vw;
+      font-weight: 400;
+      color: var(--gunmetal);
+      background-color: var(--baby-powder);
+      padding: 1% 3%;
+      margin: 5% 5%;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+      box-shadow: 0 15px 10px rgba(255, 255, 255, 0.119);
+    }
+
+    .icons{
+      position: fixed;
+      z-index: 100;
+    }
+
+    .icons .fab{
+      width: 10vw;
+      padding: 1vw;
+      font-size: 5vw;
+      cursor: pointer;
+      /* background-color: var(--baby-powder); */
+      /* transition: 0.5s ease; */
+    }
+    body {
+      /* Hide the default scrollbar */
+      scrollbar-width: none;
+    }
+    
+    body::-webkit-scrollbar {
+      width: 12px;
+      display: none; /* Hide the scrollbar by default */
+    }
+    
+    body:hover::-webkit-scrollbar,
+    body:active::-webkit-scrollbar {
+      display: block; /* Show the scrollbar on hover or when scrolling */
+    }
+    
+    body::-webkit-scrollbar-track {
+      background: var(--gunmetal);
+    }
+    
+    body::-webkit-scrollbar-thumb {
+      background: var(--azure-web);
+      border-radius: 50px;
+    }
+    
+    body::-webkit-scrollbar-thumb:hover {
+      background: var(--verdigris);
+    }
+    
+    body {
+      overflow-x: hidden;
+      overflow-y: auto; /* Use "auto" to only show scrollbar when needed */
+    }
+}

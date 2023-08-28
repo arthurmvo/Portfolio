@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <section>
+        <div class="navbar">
+            <div class="logo">Arthur<b>-</b>Dev</div>
+            <ol class="navItems">
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ol>
+            <label for="check">
+                <i class="fa fa-bars" id="navBtn"></i>
+        </div>
+        <div class="wrapper">
+            <div class="text_container">
+                <span class="topline">Hello</span>
+                <h1>I'm <span class="multiText">Mobile</span><br> Developer</h1>
+                <p>PlaceHolder PlaceHolder PlaceHolder PlaceHolder PlaceHolder</p>
+                <div class="btns">
+                    <button>Download CV</button>
+                    <button>Hire Me</button>
+                </div>
+            </div>
+            <div class="image_container">
+                <div class="imgbox">
+                    <span class="animblob"></span>
+                    <img src="images/me.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="links">
+            <i class="fab fa-linkedin"><span>linkedin</span></i><br>
+            <i class="fab fa-github"><span>github</span></i><br>
+            <i class="fab fa-instagram"><span>instagram</span></i>
+        </div>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typingEffect = new Typed(".multiText", {
+            strings: ["Mobile", "Web", "Full-Stack"],
+            typeSpeed: 100,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
